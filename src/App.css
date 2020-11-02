@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
+/* GLOBAL */
+body {
+  background-color: #e5e5e5;
+}
+.container {
+  max-width: 1400px;
+  width: 95%;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+h2 {
+  font-size: 25px;
+}
+strong {
+  font-weight: 600;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  width: auto;
+  height: 160px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+header p {
+  font-size: 30px;
+  font-weight: 400;
+}
+nav {
+  width: auto;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #333333;
+  color: #fff;
+}
+nav > ul:first-child {
+  display: flex;
+}
+nav > ul:first-child > li:not(:first-child) {
+  margin-left: 40px;
+}
+main {
+  margin-top: 20px;
+  display: flex;
+  /* height: 700px; */
+}
+main > div:first-child {
+  flex: 4;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.item {
+  background-color: #fff;
+  padding: 20px;
+}
+.item:first-child {
+  margin-bottom: 20px;
+}
+.itemTitle,
+.itemSubtitle,
+.item-itemPicture {
+  margin-bottom: 10px;
+}
+.item-itemPicture {
+  width: 100%;
+  height: 150px;
+  background-color: #c4c4c4;
+}
+
+/* Side Section */
+.aboutMe {
+  flex: 1;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-left: 20px;
+  background-color: #fff;
+}
+.aboutMe-itemPicture {
+  width: 100%;
+  height: 180px;
+  background-color: #c4c4c4;
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+  background-color: #dddd;
+  height: 63px;
+  width: auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .aboutMe {
+    margin-left: 0;
+    margin-top: 20px;
   }
 }
